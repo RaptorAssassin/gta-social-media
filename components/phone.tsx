@@ -8,11 +8,7 @@ export function Phone({ children }: { children?: React.ReactNode }) {
     <div className="flex aspect-390/844 max-h-[85dvh] w-[min(92vw,390px,calc(85dvh*390/844))] shrink-0 flex-col overflow-hidden rounded-[2.5rem] bg-black p-2.5 sm:w-[min(95vw,390px,calc(85dvh*390/844))] sm:rounded-[3rem] sm:p-3">
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-4xl bg-white sm:rounded-[2.5rem]">
         <PhoneHeader />
-        <div className="min-h-0 flex-1 overflow-y-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aspernatur
-          temporibus molestias atque sunt iste obcaecati voluptates repudiandae
-          nulla sit hic, excepturi facilis, magni eos minus quasi quis fugit
-          earum?
+        <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto">
           {children}
         </div>
       </div>
