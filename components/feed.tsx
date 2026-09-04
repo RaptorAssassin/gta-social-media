@@ -9,10 +9,11 @@ import {
 } from '@/lib/animations'
 import { PlusIcon } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function Feed() {
   return (
-    <div className="relative h-full w-full overflow-hidden">
+    <div className="relative flex h-full w-full flex-col overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/app-background.png"
@@ -22,7 +23,7 @@ export function Feed() {
           priority
         />
       </div>
-      <div className="relative z-10 flex flex-col gap-2 p-2">
+      <div className="relative z-10 flex flex-1 flex-col gap-2 overflow-y-auto p-2 pb-20">
         <Post />
       </div>
       <NavigationBar />
@@ -30,12 +31,15 @@ export function Feed() {
   )
 }
 
+const MotionLink = motion.create(Link)
+
 function NavigationBar() {
   return (
-    <div className="text-background absolute bottom-3 left-1/2 z-10 -translate-x-1/2">
+    <div className="text-background sticky bottom-3 z-10 mt-auto flex justify-center py-2">
       <div className="flex items-center justify-around">
-        <motion.button
-          className="border-background/80 flex cursor-pointer items-center justify-center rounded-xl border-2 p-2"
+        <MotionLink
+          href="/create"
+          className="border-background/80 flex cursor-pointer items-center justify-center rounded-xl border-2 p-2 backdrop-blur-sm"
           {...buttonMotionProps}
           variants={buttonVariants}
         >
@@ -45,7 +49,7 @@ function NavigationBar() {
           >
             <PlusIcon />
           </motion.span>
-        </motion.button>
+        </MotionLink>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 export type Post = {
   id: string
-  description: string
+  caption: string
   imageUrl?: string
   likes: number
   comments: Comment[]

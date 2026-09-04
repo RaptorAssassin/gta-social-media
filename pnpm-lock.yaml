@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@unlayer/react-image-editor':
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.2.8)
       eslint-config-prettier:
         specifier: ^10.1.8
         version: 10.1.8(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))
@@ -645,6 +648,15 @@ packages:
   '@typescript-eslint/visitor-keys@8.69.0':
     resolution: {integrity: sha512-+rmdgPA+EXkNgKYvHvFfhrs35utXbwaC5PGpDquSXcoXQDKUA5UjV0LmTucG/4JXkM31BTu4TilHtrN8IVBe8w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@unlayer/react-image-editor@1.0.2':
+    resolution: {integrity: sha512-VJx1jSnmHX4rpaY+GdK98PWL0sUxu0fimankgXI9S0DjwpqJvlJXYhPn9iCpCzVykvVviwU2C6qWO/wdOfXHlA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      react: '>=18'
+
+  '@unlayer/types@1.448.0':
+    resolution: {integrity: sha512-k7NhJEdp5d40pWRAp9hSpTsyjD/vCrWrinNJaZkkXRU4YK7nsa9EYvnXHmVa/TcuevmPz0JRxzi8rJ1qSfvFDw==}
 
   '@unrs/resolver-binding-android-arm-eabi@1.12.2':
     resolution: {integrity: sha512-g5T90pqg1bo/7mytQx6F4iBNC0Wsh9cu+z9veDbFjc7HjpesJFWD7QMS0NGStXM075+7dJPPVvBbpZlnrdpi/w==}
@@ -2682,6 +2694,13 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.69.0
       eslint-visitor-keys: 5.0.1
+
+  '@unlayer/react-image-editor@1.0.2(react@19.2.8)':
+    dependencies:
+      '@unlayer/types': 1.448.0
+      react: 19.2.8
+
+  '@unlayer/types@1.448.0': {}
 
   '@unrs/resolver-binding-android-arm-eabi@1.12.2':
     optional: true
