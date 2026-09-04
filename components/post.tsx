@@ -1,36 +1,65 @@
+'use client'
+
 import { HeartIcon, MessageCircleIcon, SendIcon } from 'lucide-react'
 import Image from 'next/image'
+import { motion } from 'motion/react'
+import {
+  buttonMotionProps,
+  buttonVariants,
+  iconVariants,
+} from '../lib/animations'
 
 export function Post() {
   return (
-    <div className="w-full">
+    <div className="w-full text-background drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
       <Image
         className="overflow-hidden rounded-lg object-cover"
         src="/images/example-post.jpg"
         alt="Post Image"
-        width={390}
-        height={844}
+        width={400}
+        height={200}
         draggable={false}
       />
       <div className="mt-1 flex gap-3">
-        <div className="flex gap-1">
-          <button className="">
+        <motion.button
+          {...buttonMotionProps}
+          variants={buttonVariants}
+          className="flex cursor-pointer items-center gap-1"
+        >
+          <motion.span
+            variants={iconVariants}
+            className="flex items-center justify-center"
+          >
             <HeartIcon />
-          </button>
+          </motion.span>
           <span>123</span>
-        </div>
-        <div className="flex gap-1">
-          <button className="">
+        </motion.button>
+        <motion.button
+          {...buttonMotionProps}
+          variants={buttonVariants}
+          className="flex cursor-pointer items-center gap-1"
+        >
+          <motion.span
+            variants={iconVariants}
+            className="flex items-center justify-center"
+          >
             <MessageCircleIcon />
-          </button>
+          </motion.span>
           <span>42</span>
-        </div>
-        <div className="flex gap-1">
-          <button className="">
+        </motion.button>
+        <motion.button
+          {...buttonMotionProps}
+          variants={buttonVariants}
+          className="flex cursor-pointer items-center gap-1"
+        >
+          <motion.span
+            variants={iconVariants}
+            className="flex items-center justify-center"
+          >
             <SendIcon />
-          </button>
+          </motion.span>
           <span>12</span>
-        </div>
+        </motion.button>
       </div>
       <div className="mt-1 flex gap-1">
         <span className="font-semibold">Username</span>
