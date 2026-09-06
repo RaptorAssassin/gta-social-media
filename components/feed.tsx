@@ -19,6 +19,7 @@ export function Feed() {
           src="/images/app-background.png"
           alt="App Background"
           fill
+          sizes="(max-width: 640px) 98vw, 450px"
           className="object-cover brightness-50 contrast-110"
           priority
         />

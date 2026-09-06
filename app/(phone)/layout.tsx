@@ -7,9 +7,9 @@ export default function PhoneLayout({
 }) {
   return (
     <div className="h-dvh w-full overflow-hidden bg-white select-none">
-      <div className="flex h-full w-full items-center justify-center p-4 sm:p-6">
+      <div className="flex h-full w-full items-center justify-center p-1 sm:p-2">
         <Phone>
-          <main className="h-full w-full">{children}</main>
+          <main className="flex min-h-0 w-full flex-1 flex-col">{children}</main>
         </Phone>
       </div>
     </div>
