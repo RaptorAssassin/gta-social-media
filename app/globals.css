@@ -27,13 +27,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* Phone editor — force full-height and compact rail for 450px phone */
-[id^='image-editor-'] {
-  height: 100% !important;
-  min-height: 0 !important;
-}
-[id^='image-editor-'] > div {
-  height: 100% !important;
-  min-height: 0 !important;
-}
