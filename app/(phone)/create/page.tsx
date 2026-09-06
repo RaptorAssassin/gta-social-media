@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Post } from '@/lib/types'
 import { UploadIcon } from 'lucide-react'
 import { useRef, useState } from 'react'
